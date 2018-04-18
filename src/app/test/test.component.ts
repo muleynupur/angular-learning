@@ -3,16 +3,24 @@ import { Component, OnInit } from '@angular/core';
 @Component({
 
 
-  // tslint:disable-next-line:component-selector
-  selector: '[app-test]',
-  template: '<div>Inline Template</div>',
-  styles: [`
-  div {
-    color:red;
-  }
-  `]
+
+  selector: 'app-test',
+  template: `
+  <h2>
+  Welcome {{name}}
+  <h2 [style.color]="'orange'">style binding</h2>
+   `,
+styles: []
 })
 export class TestComponent implements OnInit {
+
+// tslint:disable-next-line:quotemark
+public name = "Code Evolution";
+public hasError = false;
+public isSpecial = true;
+
+
+
 
   constructor() { }
 
