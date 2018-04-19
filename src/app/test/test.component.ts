@@ -3,22 +3,25 @@ import { Component, OnInit } from '@angular/core';
 @Component({
 selector: 'app-test',
   template: `
-  <input [(ngModel)]="name" type="text">
-  {{name}}
+  <div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+  <ng-template #thenBlock>
+  <h2>Code Evolution</h2>
+  </ng-template>
+
+  <ng-template #elseBlock>
+  <h2>Hidden</h>
+  </ng-template>
    `,
 styles: []
 })
 export class TestComponent implements OnInit {
 
-// tslint:disable-next-line:quotemark
-public name = "";
+displayName = false;
 
   constructor() { }
 
   ngOnInit() {
-  }
-  logMessage(value) {
-    console.log(value);
   }
 }
 
