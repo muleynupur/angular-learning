@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Application';
-  // tslint:disable-next-line:quotemark
-  public name = "Nupur";
-  // tslint:disable-next-line:quotemark
-  public message = "";
 }

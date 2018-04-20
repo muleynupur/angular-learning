@@ -18,7 +18,7 @@ selector: 'app-test',
   <h2>{{0.25 | percent}}</h2>
   <h2>{{0.25 | currency}}</h2>
   <h2>{{0.25 | currency:'GBP'}}</h2>
-  <h2>{{0.25 | currency:'GBP':'code'}}</h2>
+  <h2>{{0.25 | currency:'GBP'}}</h2>
   <h2>{{0.25 | currency:'EUR':'code'}}</h2>
 
   <h2>{{date}}</h2>
