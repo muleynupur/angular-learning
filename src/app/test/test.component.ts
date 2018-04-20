@@ -10,7 +10,7 @@ selector: 'app-test',
   </ng-template>
 
   <ng-template #elseBlock>
-  <h2>Hidden</h>
+  <h2>Hidden</h2>
   </ng-template>
    `,
 styles: []
