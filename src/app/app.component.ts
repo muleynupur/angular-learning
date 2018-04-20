@@ -10,5 +10,5 @@ export class AppComponent {
   // tslint:disable-next-line:quotemark
   public name = "Nupur";
   // tslint:disable-next-line:quotemark
-  public message  = "";
+  public message = "";
 }
