@@ -3,21 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
 selector: 'app-test',
   template: `
-  <div *ngIf="displayName; then thenBlock; else elseBlock"></div>
-
-  <ng-template #thenBlock>
-  <h2>Code Evolution</h2>
-  </ng-template>
-
-  <ng-template #elseBlock>
-  <h2>Hidden</h2>
-  </ng-template>
+  <div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">You picker red color</div>
+  <div *ngSwitchCase="'blue'">You picker blue color</div>
+  <div *ngSwitchCase="'green'">You picker green color</div>
    `,
 styles: []
 })
 export class TestComponent implements OnInit {
 
-displayName = false;
+// tslint:disable-next-line:quotemark
+public color = "red";
 
   constructor() { }
 
