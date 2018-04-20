@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -12,19 +13,14 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class EmployeeDetailComponent implements OnInit {
-  public employees = [
-    // tslint:disable-next-line:quotemark
-    {"id": 1 , "name": "Nupur", "age": 25},
-    // tslint:disable-next-line:quotemark
-    {"id": 2 , "name": "Pradnya", "age": 25},
-    // tslint:disable-next-line:quotemark
-    {"id": 3 , "name": "Sarita", "age": 25},
-    // tslint:disable-next-line:quotemark
-    {"id": 4 , "name": "Maya" , "age": 25}
-  ];
-  constructor() { }
+
+  [x: string]: any;
+
+  public employees = [];
+constructor(private_employeeService: EmployeeService) { }
 
   ngOnInit() {
+    this.employees = this._employeeService.getemployees();
   }
 
 }
